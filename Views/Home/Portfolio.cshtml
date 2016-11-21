@@ -1,0 +1,33 @@
+﻿<section id="portfolio">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title wow fadeInDown">Gallery</h2>
+            <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+        </div>
+        <div class="text-center" style="display:none;">
+            <ul class="portfolio-filter">
+                <li><a class="active" href="#" data-filter="*">All Works</a></li>
+                <li><a href="#" data-filter=".designing">Designing</a></li>
+                <li><a href="#" data-filter=".mobile">Mobile App</a></li>
+                <li><a href="#" data-filter=".development">Development</a></li>
+            </ul><!--/#portfolio-filter-->
+        </div>
+        <div class="portfolio-items">
+            <!--/.portfolio-item-->
+           @if (Model != null)
+           {
+               foreach (var item in Model)
+               {
+                  <div class="portfolio-item designing">
+                <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="/Content/images/galeri/@item.ResimURL" alt="">
+                    <div class="portfolio-info">
+                        <a class="preview" href="/Content/images/portfolio/01.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+               }
+           }
+        </div>
+    </div><!--/.container-->
+</section><!--/#portfolio-->
